@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PermissionPage">
+
+    <TextView
+        android:id="@+id/disclaimer"
+        android:layout_width="223dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="149dp"
+        android:layout_marginBottom="6dp"
+        android:text="By entering your phone number, you agree to receive text message notifications. Carrier charges may apply."
+        app:layout_constraintBottom_toTopOf="@+id/phoneNum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/phoneNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Number"
+        app:layout_constraintBottom_toTopOf="@+id/accept"
+        app:layout_constraintStart_toStartOf="@+id/disclaimer"
+        app:layout_constraintTop_toBottomOf="@+id/disclaimer" />
+
+    <Button
+        android:id="@+id/accept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="20dp"
+        android:text="Notify Me"
+        app:layout_constraintBottom_toTopOf="@+id/goBackButton"
+        app:layout_constraintStart_toStartOf="@+id/goBackButton"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNum" />
+
+    <Button
+        android:id="@+id/goBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="241dp"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accept" />
+</androidx.constraintlayout.widget.ConstraintLayout>
